@@ -1,7 +1,5 @@
 quiet: false
-log:
-  level: "debug"
-  file: "/srv/log.out"
+log: { level: "debug" }
 
 provider:
   root: /data
