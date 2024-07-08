@@ -24,7 +24,7 @@ RUN mkdir -p /run/nginx && \
     mkdir -p /build
 
 WORKDIR /srv
-HEALTHCHECK --interval=5m --timeout=3s \
+HEALTHCHECK --interval=5s --timeout=3s --retries=3 \
   CMD curl -f http://localhost:8080/ping || exit 1
 EXPOSE 8080
 
