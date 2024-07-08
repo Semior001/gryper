@@ -27,7 +27,7 @@ HEALTHCHECK --interval=5m --timeout=3s \
   CMD curl -f http://localhost:8080/ping || exit 1
 EXPOSE 8080
 
-# mount the /data, /srv/.vunnel.yaml
-# /build also should be mounted, it will contain files to be served
+# mount the /data, /build, /srv/.vunnel.yaml
+# first two mounts are for the data and build directories
 
 ENTRYPOINT ["/srv/entrypoint.sh"]
