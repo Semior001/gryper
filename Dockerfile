@@ -7,11 +7,12 @@ RUN curl -sSfL https://raw.githubusercontent.com/anchore/grype-db/main/install.s
     sh -s -- -b /usr/local/bin && \
     pip install --break-system-packages vunnel
 
-COPY config/crontab       /var/spool/cron/crontabs/root
-COPY config/grypedb.yaml  /srv/grypedb.yaml
-COPY script/update.sh     /srv/update.sh
-COPY script/entrypoint.sh /srv/entrypoint.sh
-COPY config/nginx.conf    /etc/nginx/nginx.conf
+COPY config/crontab          /var/spool/cron/crontabs/root
+COPY config/grypedb.yaml     /srv/grypedb.yaml
+COPY script/update.sh        /srv/update.sh
+COPY script/entrypoint.sh    /srv/entrypoint.sh
+COPY config/nginx.conf       /etc/nginx/nginx.conf
+COPY config/publish-base-url /srv/publish-base-url
 
 RUN chmod 0644 /var/spool/cron/crontabs/root && \
     chmod +x /srv/update.sh && \

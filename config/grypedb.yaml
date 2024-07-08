@@ -17,3 +17,6 @@ build:
   dir: /build
   schema-version: 5
   skip-validation: false
+
+package:
+  publish-base-url: 'PUBLISH_BASE_URL'

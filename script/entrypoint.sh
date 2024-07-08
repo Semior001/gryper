@@ -1,5 +1,8 @@
 #!/bin/sh
 
+echo "will be published at $PUBLISH_BASE_URL"
+echo "$PUBLISH_BASE_URL" > /srv/publish-base-url
+
 # start nginx
 nginx
 
