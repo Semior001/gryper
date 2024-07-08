@@ -47,6 +47,7 @@ jobs:
       - name: cleanup old images
         if: ${{ github.ref == 'refs/heads/master' }}
         uses: actions/delete-package-versions@v4
+        continue-on-error: true
         with:
           package-name: gryper
           package-type: container
