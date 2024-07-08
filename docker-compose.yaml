@@ -1,0 +1,13 @@
+services:
+  gryper:
+    image: gryper
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gryper
+    ports:
+      - 8080:8080
+    volumes:
+      - ./build:/build
+      - ./data:/data
+      - ./.vunnel.yaml:/srv/.vunnel.yaml

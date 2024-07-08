@@ -1,0 +1,19 @@
+quiet: false
+log:
+  level: "debug"
+
+provider:
+  root: /data
+  vunnel:
+    executor: local
+  configs:
+    - name: nvd
+    - name: github
+
+pull:
+  parallelism: 4
+
+build:
+  dir: /build
+  schema-version: 5
+  skip-validation: false
