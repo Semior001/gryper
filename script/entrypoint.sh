@@ -9,5 +9,6 @@ nginx
 # make initial db pull
 /srv/update.sh || exit 1
 
+echo "starting cron"
 # infinite loop to keep container running
 crond -f -L /srv/cron.log

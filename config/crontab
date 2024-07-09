@@ -1,1 +1,2 @@
-0 */3 * * * /srv/update.sh
+0 */3 * * * /srv/update.sh   # every 3 hours
+0 0   * * * /srv/droplogs.sh # every day at midnight
