@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd /srv
+
 # set PUBLISH_BASE_URL to the content of /srv/publish-base-url
 export PUBLISH_BASE_URL=$(cat /srv/publish-base-url)
 
